@@ -26,5 +26,3 @@ COPY install-tailscale.sh /tmp
 RUN /tmp/install-tailscale.sh && rm -r /tmp/*
 
 CMD ./run-tailscale.sh
-
-RUN tailscale up --advertise-exit-node
