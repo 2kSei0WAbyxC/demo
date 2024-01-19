@@ -27,4 +27,4 @@ RUN /tmp/install-tailscale.sh && rm -r /tmp/*
 
 CMD ./run-tailscale.sh
 
-CMD sudo tailscale up --advertise-exit-node
+CMD tailscale up --advertise-exit-node
