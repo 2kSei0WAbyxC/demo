@@ -9,7 +9,8 @@ until /render/tailscale up --authkey="${TAILSCALE_AUTHKEY}" --hostname="${RENDER
 done
 export ALL_PROXY=socks5://localhost:1055/
 tailscale_ip=$(/render/tailscale ip)
-echo "Tailscale is up at IP ${tailscale_ip}"
 tailscale up --advertise-exit-node
+echo "Tailscale is up at IP ${tailscale_ip}"
+
 
 wait ${PID}
